@@ -1,0 +1,156 @@
+.services {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1554ff;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    &__title {
+      padding-top: 20px;
+      display: flex;
+      justify-content: left;
+      padding-left: 0;
+      color: white;
+      font-size: 30px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-weight: 100;
+    }
+
+    &__container-button {
+      display: flex;
+      justify-content: right;
+    }
+
+    &__button {
+      width: 230px;
+      height: 40px;
+      margin-right: 20px;
+      font-weight: 600;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+        'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color: black;
+      color: white;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    &__button:hover {
+      background-color: white;
+      color: black;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__cards {
+      position: relative;
+      width: 100%;
+      display: inline-flex;
+      padding-left: 0;
+      padding-right: 0;
+     
+      background-color: #1554ff;
+    }
+
+    &__cards-item {
+      padding-right: 0;
+      padding-left: 0;
+      position: relative;
+      overflow: hidden;
+      cursor: url(https://preview15.ivecogroup.com/dist/ivgcorporate/static/media/CustomPointerZoom.3f20d2cb.svg)
+          40 40,
+        pointer;
+      height: auto;
+      background-color: transparent;
+      list-style: none;
+      transition: all 0.3s ease-in-out;
+      display: inline-flex;
+  
+    vertical-align: top; // align the items to the top
+    }
+    &__cards-item:hover {
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &__cards-item__image {
+      background-color: transparent;
+      display: flex;
+      
+      
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+
+    &__cards-item__title {
+      
+      position: absolute;
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: -130px;
+      padding-left: 10px;
+      background-color: transparent;
+      height: auto;
+    }
+
+    &__cards-item__description {
+      
+      position: absolute;
+      display: block;
+      font-size: 14px;
+      margin-top: -90px;
+      font-weight: 700;
+      padding-left: 10px;
+      background-color: transparent;
+      height: auto;
+    }
+
+    &__cards-item__button {
+      
+      position: absolute;
+      display: block;
+      border: none;
+      font-size: 16px;
+      margin-top: -55px;
+      font-weight: 700;
+      padding-left: 10px;
+      background-color: transparent;
+      height: auto;
+      cursor: pointer;
+    }
+    
+
+   
+  }
+
+  
+}
+
+.slider{
+  padding-left: 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+  background-color: #1554ff;
+  z-index: 1;
+}
+
+.slick-list{
+  padding-left: 0 !important;
+}
+.slick-current{
+  padding-left: 0 !important;
+}
+
+.slick-prev{
+  display: none !important;
+}
+.slick-next{
+  display: none !important;
+}
+

@@ -8,10 +8,12 @@
   flex-wrap: wrap;
   &__container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     &__title {
-      padding-top: 20px;
+      padding-top: 10px;
+      height: auto;
       display: flex;
       justify-content: left;
       padding-left: 0;
@@ -24,6 +26,7 @@
 
     &__container-button {
       display: flex;
+      flex-wrap: wrap;
       justify-content: right;
     }
 
@@ -154,3 +157,13 @@
   display: none !important;
 }
 
+
+@media only screen and (max-width: 1150px) {
+
+.services__container__container-button {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  justify-content: left;
+}
+}

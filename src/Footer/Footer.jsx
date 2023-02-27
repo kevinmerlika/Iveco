@@ -36,7 +36,7 @@ function Footer() {
 
  <div className='footer__container__wrapper row col-xs-11'>
         {accordion?.map((item) => (
-  <div key={item.id} className='footer__container__column-link col-xs-3'>
+  <div key={item.id} className='footer__container__column-link col-xs-3 burger-column'>
     <div className='footer__container__column-title col-xs-12'>
       {item.title}
     </div>
@@ -49,7 +49,7 @@ function Footer() {
     </div>
   </div>
 ))}
- <div className='footer__container__column-link col-xs-3'>
+ <div className='footer__container__column-link col-xs-3 burger-column'>
     <div className='footer__container__column-title col-xs-12'>
       Follow Us
     </div>

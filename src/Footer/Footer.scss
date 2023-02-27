@@ -21,6 +21,7 @@
       margin-top: 30px;
       width: 100%;
       display: flex;
+      flex-wrap: wrap;
       gap: 3%;
       list-style: none;
       white-space: nowrap;
@@ -182,14 +183,14 @@
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 740px) {
 .footer__container__wrapper {
 
   flex-direction: column;
 }
 .footer{
 &__container{
-  padding-bottom: 200px;
+
   margin-top: 0px;
   padding-top: 10vh;
   background-color: black;
@@ -197,7 +198,7 @@
 
 &__column-link{
   padding-top: 30px;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 }
 
 &__column-title{
@@ -219,5 +220,13 @@
   height: 1px;
 }
 }
+
 }
+.burger-column{
+
+    flex-basis: 40% !important;
+    max-width: 100% !important;
+  }
+
 }
+

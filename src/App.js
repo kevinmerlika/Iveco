@@ -6,6 +6,7 @@ import Footer from './Footer/Footer';
 import './Style/general.scss';
 import Vehicles from './Section/Vehicles';
 import Services from './Section/Services';
+import VehicleFilter from './Section/VehicleFilter';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     </header> 
     <main>
       <Hero/>
+      <VehicleFilter/>
       <Vehicles/>
       <Services/>
     </main>

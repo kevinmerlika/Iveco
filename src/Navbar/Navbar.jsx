@@ -76,7 +76,9 @@ function Navbar() {
               <li dangerouslySetInnerHTML={{ __html: item.title }}></li>
               </a>
           ))}
-               
+               <a className='burger-container--opened__link'>
+            <button className='burger-container--opened__sales'>Sales</button>
+              </a>
            </ul>
       </section></>
   );

@@ -6,6 +6,11 @@ import '../Style/flexboxgrid.css';
 import '../Style/general.scss';
 
 function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
   const [fix, setFix] = useState(false);
   const staticHeight = 80;
   const prevScrollY = useRef(0);
@@ -32,7 +37,11 @@ function Navbar() {
   return (
     <header className={`header ${fix ? 'header__fixed' : 'header__visible'}`}>
       <section className="header-bar container row start-xs">
-        
+        <div className='menu menugrid' onClick={handleClick}>
+        <span className={open ? "line line-1 open" : "line line-1"}></span>
+        <span className={open ? "line line-2 open" : "line line-2"}></span>
+        <span className={open ? "line line-3 open" : "line line-3"}></span>
+        </div>
         <ul className="header-bar__list col-xs-7">
           {navbar_items?.map((item, index) => (
             <a className='header-bar__a' key={index} href="/" style={{ textDecoration: 'none' }}>

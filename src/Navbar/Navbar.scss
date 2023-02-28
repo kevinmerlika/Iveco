@@ -256,6 +256,8 @@
       border-radius: 8px;
       box-shadow: 0px 1px 30px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255);
       transition: all 0.3s ease-in-out;
+      animation: color2 1s forwards;
+      
 
     }
 
@@ -263,6 +265,46 @@
       transition: all 0.3s ease-in-out;
       background-color: white !important;
       color: #1554ff;
+      animation: colors 2s forwards;
+    }
+
+    @keyframes colors {
+      0% {
+        background-color: #1554ff;
+        box-shadow: 0px 1px 30px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255);
+        color: white;
+      }
+      50% {
+        background-color: white;
+        box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.2);
+        color: #1554ff;
+      }
+      100% {
+        background-color: white;
+        box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.2);
+        color: #1554ff;
+      }
+    }
+
+    @keyframes color2 {
+      
+      0% {
+        background-color: white;
+        box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.2);
+        color: #1554ff;
+      }
+      1% {
+        background-color: #ffea00;
+        box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.3), 0px 0px 5px rgba(0, 0, 0, 0.2);
+        color: white;
+      }
+      100% {
+        background-color: #1554ff;
+        box-shadow: 0px 1px 30px rgb(255, 255, 255), 0px 0px 5px rgb(255, 255, 255);
+        color: white;
+      }
+      
+     
     }
   }
   .burger-container--closed{

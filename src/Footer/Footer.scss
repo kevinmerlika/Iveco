@@ -1,3 +1,15 @@
+.accordion--opened{
+overflow: hidden;
+max-height: 500px;
+transition: max-height 0.3s ease-in-out;
+}
+
+.accordion--closed{
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
+}
+
 .footer{
 
   background-color: black;
@@ -57,8 +69,10 @@
     }
 
     &__column-title{
+
       padding-left: 0;
       display: flex;
+      justify-content: space-between;
       font-weight: 600;
       position: relative;
     }
@@ -75,8 +89,29 @@
       height: 1px;
     }
 
+    &__column-show{
+      display: flex;
+
+      justify-content: right;
+      color: white;
+    }
+
+    &__arrow{
+      visibility: collapse;
+      cursor: pointer;
+      transition: all 0.6s ease-in-out;
+    }
+
+    &__arrow--opened{
+      visibility: collapse;
+      transform: rotate(450deg);
+      cursor: pointer;
+      transition: all 0.6s ease-in-out;
+    }
+
     
 
+    
     &__accordion-list{
       padding-left: 0;
       display: flex;
@@ -218,6 +253,19 @@
   width: 100%; 
   background: #a5a5a5;
   height: 1px;
+}
+
+&__arrow{
+  visibility: visible;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
+
+&__arrow--opened{
+  visibility: visible;
+  transform: rotate(450deg);
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
 }
 }
 

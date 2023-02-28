@@ -1,10 +1,46 @@
 import React from 'react'
 import './Footer.scss'
+import { useState, useEffect } from 'react';
 import navbar_items from '../Data/navbarData';
 import '../Style/flexboxgrid.css';
 import accordion from '../Data/accordion';
 
+
+
+
 function Footer() {
+  const [openStates, setOpenStates] = useState({});
+const [accordionHeight, setAccordionHeight] = useState(0);
+
+const changeSpan = (id) => {
+  setOpenStates((prevState) => ({
+    ...prevState,
+    [id]: !prevState[id]
+  }));
+};
+
+useEffect(() => {
+  setTimeout(() => {
+    const openedAccordion = document.querySelector('.accordion--opened');
+    if (openedAccordion) {
+      setAccordionHeight(openedAccordion.scrollHeight);
+    }
+  }, 10);
+}, [openStates]);
+
+
+useEffect(() => {
+  const handleResize = () => {
+    setOpenStates(window.innerWidth >= 768);
+  };
+
+  window.addEventListener('resize', handleResize);
+
+  return () => {
+    window.removeEventListener('resize', handleResize);
+  };
+}, []);
+
   return (
     <footer className='footer row center-xs'>
         <section className='footer__container col-xs-11'>
@@ -39,8 +75,10 @@ function Footer() {
   <div key={item.id} className='footer__container__column-link col-xs-3 burger-column'>
     <div className='footer__container__column-title col-xs-12'>
       {item.title}
+      <div className='footer__container__column-show col-xs-1'>
+        <span className={ openStates[item.id] ? 'footer__container__arrow' : 'footer__container__arrow--opened'} onClick={() => changeSpan(item.id)}>&#10148;</span></div>
     </div>
-    <div className='footer__container__accordion'>
+    <div className={ openStates[item.id] ? 'accordion--closed': 'accordion--opened'}>
       <ul className='footer__container__accordion-list col-xs-11'>
         {item.content.map((content, index) => (
           <a  key={index} className='footer__container__accordion-listitem'><li>{content}</li></a>
